@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="normal_text_size">18sp</dimen>
+    <dimen name="header_text_size">32sp</dimen>
+    <dimen name="normal_padding">24dp</dimen>
+    <dimen name="less_padding">12dp</dimen>
+    <dimen name="corner_radius">5dp</dimen>
+</resources>
