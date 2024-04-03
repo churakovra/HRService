@@ -4,5 +4,7 @@
     <dimen name="header_text_size">32sp</dimen>
     <dimen name="normal_padding">24dp</dimen>
     <dimen name="less_padding">12dp</dimen>
-    <dimen name="corner_radius">5dp</dimen>
+    <dimen name="min_padding">3dp</dimen>
+    <dimen name="corner_radius">3dp</dimen>
+    <dimen name="corner_radius_smooth">30dp</dimen>
 </resources>
