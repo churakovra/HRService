@@ -44,7 +44,7 @@
                 android:background="@drawable/grey_background_round"
                 android:contentDescription="@string/user_avatar"
                 android:padding="@dimen/dp1_padding"
-                android:src="@drawable/avatar_user"
+                android:src="@drawable/avatar_user_icon"
                 app:layout_constraintBottom_toBottomOf="@id/welcome_text_view"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/welcome_text_view" />
@@ -52,7 +52,7 @@
             <View
                 android:id="@+id/grey_line"
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="@dimen/dp2_padding"
                 android:layout_marginTop="@dimen/less_padding"
                 android:background="@drawable/grey_background"
                 app:layout_constraintTop_toBottomOf="@id/username_text_view" />
@@ -76,7 +76,7 @@
                 android:background="@drawable/blue_background_round"
                 android:contentDescription="@string/add_new_candidate"
                 android:padding="@dimen/less_padding"
-                android:src="@drawable/add_candidate"
+                android:src="@drawable/add_candidate_icon"
                 app:layout_constraintEnd_toStartOf="@id/check_candidate_button"
                 app:layout_constraintHorizontal_chainStyle="spread_inside"
                 app:layout_constraintStart_toStartOf="parent"
@@ -89,7 +89,7 @@
                 android:background="@drawable/blue_background_round"
                 android:contentDescription="@string/add_new_candidate"
                 android:padding="@dimen/less_padding"
-                android:src="@drawable/check_candidate"
+                android:src="@drawable/check_candidate_icon"
                 app:layout_constraintEnd_toStartOf="@id/check_notifications_button"
                 app:layout_constraintStart_toEndOf="@id/add_candidate_button"
                 app:layout_constraintTop_toTopOf="@id/add_candidate_button" />
@@ -101,7 +101,7 @@
                 android:background="@drawable/blue_background_round"
                 android:contentDescription="@string/add_new_candidate"
                 android:padding="@dimen/less_padding"
-                android:src="@drawable/check_notifications"
+                android:src="@drawable/check_notifications_icon"
                 app:layout_constraintEnd_toStartOf="@id/open_camera_button"
                 app:layout_constraintStart_toEndOf="@id/check_candidate_button"
                 app:layout_constraintTop_toTopOf="@id/add_candidate_button" />
@@ -113,7 +113,7 @@
                 android:background="@drawable/blue_background_round"
                 android:contentDescription="@string/add_new_candidate"
                 android:padding="@dimen/less_padding"
-                android:src="@drawable/open_camera"
+                android:src="@drawable/open_camera_icon"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/check_notifications_button"
                 app:layout_constraintTop_toTopOf="@id/add_candidate_button" />

@@ -39,7 +39,7 @@
             android:layout_width="250dp"
             android:layout_height="250dp"
             android:contentDescription="@string/company_logo"
-            android:src="@drawable/logo"
+            android:src="@drawable/logo_icon"
             app:layout_constraintBottom_toTopOf="@id/start_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

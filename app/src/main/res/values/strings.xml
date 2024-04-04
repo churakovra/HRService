@@ -27,4 +27,9 @@
     <string name="staff">Сотрудники</string>
     <string name="user_avatar">user_avatar</string>
     <string name="is_online_indicator">is online indicator</string>
+    <string name="button_go_back">button go back</string>
+    <string name="notifications">Уведомления</string>
+    <string name="button_find">button find</string>
+    <string name="notification">Уведомление</string>
+    <string name="today_date">Сегодня</string>
 </resources>
