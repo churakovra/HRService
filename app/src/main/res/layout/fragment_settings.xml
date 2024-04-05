@@ -1,14 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SettingsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:padding="@dimen/normal_padding">
 
+        <TextView
+            android:id="@+id/settings_header_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings"
+            android:textSize="@dimen/header_h2_text_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/user_profile_image_view"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/user_avatar"
+            android:src="@drawable/avatar_user_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/settings_header_text_view" />
+
+        <TextView
+            android:id="@+id/change_avatar_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/less_padding"
+            android:text="@string/change_avatar"
+            android:textSize="@dimen/normal_text_size"
+            app:layout_constraintEnd_toEndOf="@id/user_profile_image_view"
+            app:layout_constraintStart_toStartOf="@id/user_profile_image_view"
+            app:layout_constraintTop_toBottomOf="@id/user_profile_image_view" />
+
+        <TextView
+            android:id="@+id/firstname_field_header_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/less_padding"
+            android:text="@string/firstname"
+            android:textSize="@dimen/less_text_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/change_avatar_text_view" />
+
+        <EditText
+            android:id="@+id/firstname_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="name"
+            android:background="@drawable/white_background_with_border"
+            android:hint="@string/firstname"
+            android:inputType="textPersonName"
+            android:padding="@dimen/less_padding"
+            android:textSize="@dimen/normal_text_size"
+            app:layout_constraintStart_toStartOf="@id/firstname_field_header_text_view"
+            app:layout_constraintTop_toBottomOf="@id/firstname_field_header_text_view" />
+
+        <TextView
+            android:id="@+id/lastname_field_header_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/less_padding"
+            android:text="@string/lastname"
+            android:textSize="@dimen/less_text_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/firstname_edit_text" />
+
+        <EditText
+            android:id="@+id/lastname_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="name"
+            android:background="@drawable/white_background_with_border"
+            android:hint="@string/lastname"
+            android:inputType="textPersonName"
+            android:padding="@dimen/less_padding"
+            android:textSize="@dimen/normal_text_size"
+            app:layout_constraintStart_toStartOf="@id/lastname_field_header_text_view"
+            app:layout_constraintTop_toBottomOf="@id/lastname_field_header_text_view" />
+
+        <TextView
+            android:id="@+id/birthday_field_header_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/less_padding"
+            android:text="@string/birthday"
+            android:textSize="@dimen/less_text_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lastname_edit_text" />
+
+        <EditText
+            android:id="@+id/birthday_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="creditCardExpirationDate"
+            android:background="@drawable/white_background_with_border"
+            android:hint="@string/birthday"
+            android:inputType="date"
+            android:padding="@dimen/less_padding"
+            android:textSize="@dimen/normal_text_size"
+            app:layout_constraintStart_toStartOf="@id/birthday_field_header_text_view"
+            app:layout_constraintTop_toBottomOf="@id/birthday_field_header_text_view" />
+
+        <TextView
+            android:id="@+id/email_field_header_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/less_padding"
+            android:text="@string/email"
+            android:textSize="@dimen/less_text_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/birthday_edit_text" />
+
+        <EditText
+            android:id="@+id/email_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="emailAddress"
+            android:background="@drawable/white_background_with_border"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/less_padding"
+            android:textSize="@dimen/normal_text_size"
+            app:layout_constraintStart_toStartOf="@id/email_field_header_text_view"
+            app:layout_constraintTop_toBottomOf="@id/email_field_header_text_view" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/save_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/blue_background"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/normal_text_size"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

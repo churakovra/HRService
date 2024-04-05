@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">HR Service</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="company_logo">Company logo</string>
     <string name="start">Начать</string>
@@ -32,4 +31,11 @@
     <string name="button_find">button find</string>
     <string name="notification">Уведомление</string>
     <string name="today_date">Сегодня</string>
+    <string name="settings">Настройки</string>
+    <string name="change_avatar">Изменить фото профиля</string>
+    <string name="firstname">Имя</string>
+    <string name="lastname">Фамилия</string>
+    <string name="birthday">Дата рождения</string>
+    <string name="email">Email</string>
+    <string name="save">Сохранить</string>
 </resources>
