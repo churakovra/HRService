@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/min_padding"
+    android:background="@drawable/light_blue_background"
+    android:padding="@dimen/normal_padding">
+
+    <ImageView
+        android:id="@+id/user_profile_image_view"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="@dimen/less_padding"
+        android:layout_weight="0"
+        android:background="@drawable/white_background_round"
+        android:contentDescription="@string/user_avatar"
+        android:padding="@dimen/min_padding"
+        android:src="@drawable/avatar_man1_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/notification_header_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal_padding"
+        android:text="@string/notification"
+        android:textSize="@dimen/normal_text_size"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/user_profile_image_view"
+        app:layout_constraintTop_toTopOf="@id/user_profile_image_view" />
+
+    <TextView
+        android:id="@+id/notification_date_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/min_padding"
+        android:text="@string/today_date"
+        android:textSize="@dimen/less_text_size"
+        app:layout_constraintStart_toStartOf="@id/notification_header_text_view"
+        app:layout_constraintTop_toBottomOf="@id/notification_header_text_view" />
+
+    <ImageView
+        android:id="@+id/unchecked_notification"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginEnd="@dimen/less_padding"
+        android:layout_weight="0"
+        android:background="@drawable/blue_circle"
+        android:contentDescription="@string/is_online_indicator"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

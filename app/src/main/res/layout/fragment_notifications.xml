@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NotificationsFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/normal_padding">
+
+            <ImageView
+                android:id="@+id/back_arrow_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/button_go_back"
+                android:src="@drawable/back_arrow_icon"
+                app:layout_constraintEnd_toStartOf="@id/notification_header_text_view"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/notification_header_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/notifications"
+                android:textSize="@dimen/header_h2_text_size"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/back_arrow_button"
+                app:layout_constraintEnd_toStartOf="@id/find_button"
+                app:layout_constraintStart_toEndOf="@id/back_arrow_button"
+                app:layout_constraintTop_toTopOf="@id/back_arrow_button" />
+
+            <ImageView
+                android:id="@+id/find_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/button_find"
+                android:src="@drawable/find_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/notification_header_text_view"
+                app:layout_constraintTop_toTopOf="@id/back_arrow_button" />
+
+            <View
+                android:id="@+id/grey_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp2_padding"
+                android:layout_marginTop="@dimen/less_padding"
+                android:background="@drawable/grey_background"
+                app:layout_constraintTop_toBottomOf="@id/back_arrow_button" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/less_padding"
+                app:layout_constraintTop_toBottomOf="@id/grey_line"
+                tools:itemCount="8"
+                tools:listitem="@layout/notification_item" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>
