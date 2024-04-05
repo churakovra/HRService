@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/normal_padding">
+
+            <TextView
+                android:id="@+id/welcome_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome"
+                android:textSize="@dimen/header_text_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread" />
+
+            <TextView
+                android:id="@+id/username_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/firstname_lastname"
+                android:textSize="@dimen/normal_text_size"
+                app:layout_constraintStart_toStartOf="@id/welcome_text_view"
+                app:layout_constraintTop_toBottomOf="@id/welcome_text_view" />
+
+            <ImageView
+                android:id="@+id/user_profile_image_view"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/grey_background_round"
+                android:contentDescription="@string/user_avatar"
+                android:padding="@dimen/dp1_padding"
+                android:src="@drawable/avatar_user_icon"
+                app:layout_constraintBottom_toBottomOf="@id/welcome_text_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/welcome_text_view" />
+
+            <View
+                android:id="@+id/grey_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp2_padding"
+                android:layout_marginTop="@dimen/less_padding"
+                android:background="@drawable/grey_background"
+                app:layout_constraintTop_toBottomOf="@id/username_text_view" />
+
+            <TextView
+                android:id="@+id/fast_commands_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/less_padding"
+                android:text="@string/fast_commands"
+                android:textSize="@dimen/normal_text_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/welcome_text_view"
+                app:layout_constraintTop_toBottomOf="@id/grey_line" />
+
+            <ImageView
+                android:id="@+id/add_candidate_button"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="@dimen/normal_padding"
+                android:background="@drawable/blue_background_round"
+                android:contentDescription="@string/add_new_candidate"
+                android:padding="@dimen/less_padding"
+                android:src="@drawable/add_candidate_icon"
+                app:layout_constraintEnd_toStartOf="@id/check_candidate_button"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fast_commands_text_view" />
+
+            <ImageView
+                android:id="@+id/check_candidate_button"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/blue_background_round"
+                android:contentDescription="@string/add_new_candidate"
+                android:padding="@dimen/less_padding"
+                android:src="@drawable/check_candidate_icon"
+                app:layout_constraintEnd_toStartOf="@id/check_notifications_button"
+                app:layout_constraintStart_toEndOf="@id/add_candidate_button"
+                app:layout_constraintTop_toTopOf="@id/add_candidate_button" />
+
+            <ImageView
+                android:id="@+id/check_notifications_button"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/blue_background_round"
+                android:contentDescription="@string/add_new_candidate"
+                android:padding="@dimen/less_padding"
+                android:src="@drawable/check_notifications_icon"
+                app:layout_constraintEnd_toStartOf="@id/open_camera_button"
+                app:layout_constraintStart_toEndOf="@id/check_candidate_button"
+                app:layout_constraintTop_toTopOf="@id/add_candidate_button" />
+
+            <ImageView
+                android:id="@+id/open_camera_button"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/blue_background_round"
+                android:contentDescription="@string/add_new_candidate"
+                android:padding="@dimen/less_padding"
+                android:src="@drawable/open_camera_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/check_notifications_button"
+                app:layout_constraintTop_toTopOf="@id/add_candidate_button" />
+
+            <LinearLayout
+                android:id="@+id/telegram_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_padding"
+                android:background="@drawable/blue_background"
+                android:orientation="vertical"
+                android:padding="@dimen/normal_padding"
+                app:layout_constraintStart_toStartOf="@id/welcome_text_view"
+                app:layout_constraintTop_toBottomOf="@id/add_candidate_button">
+
+                <TextView
+                    android:id="@+id/telegram_header_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hr_telegram"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/header_h2_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/telegram_body_text_view"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/min_padding"
+                    android:text="@string/telegram_body"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/normal_text_size"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/min_padding"
+                    android:background="@drawable/white_background_with_border"
+                    android:text="@string/follow_the_link"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/normal_text_size" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/staff_header_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_padding"
+                android:text="@string/staff"
+                android:textSize="@dimen/normal_text_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/welcome_text_view"
+                app:layout_constraintTop_toBottomOf="@id/telegram_linear" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/staff_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_padding"
+                app:layout_constraintStart_toStartOf="@id/welcome_text_view"
+                app:layout_constraintTop_toBottomOf="@id/staff_header_text_view"
+                tools:itemCount="4"
+                tools:listitem="@layout/staff_item" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>
