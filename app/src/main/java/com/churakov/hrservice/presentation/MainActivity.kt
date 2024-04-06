@@ -1,7 +1,8 @@
-package com.churakov.hrservice
+package com.churakov.hrservice.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.churakov.hrservice.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
